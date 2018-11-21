@@ -1,0 +1,589 @@
+* {
+margin: 0;
+padding: 0;
+border: 0;
+box-sizing: border-box;
+width: 100%;
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+
+:-moz-any(#content,#appcontent) browser{
+ margin-right:-17px!important;
+ overflow-y:scroll;
+ margin-bottom:-17px!important;
+ overflow-x:scroll;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .landing {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .wrapper {
+  	position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  	margin:0;
+  	padding:0!important;
+  }
+  .enter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  	margin:0;
+  }
+
+  .enter-button {
+    position: absolute;
+    left: 36%!important;
+    top: 46%;
+    bottom: 46%;
+    cursor: pointer;
+    width: 100px;
+    height: 38px;
+    background-color: rgba(225, 225, 225, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .grid-container {
+    display:block!important;
+  }
+  .content {
+    padding:0;
+  }
+  .header {
+    position: static!important;
+    text-align: center;
+  }
+  .nav {
+    width:100%!important;
+    position:static!important;
+    left: 5%;
+    top: 13%;
+    padding: 0 10%!important;
+    background-color: white;
+    overflow: hidden;
+  }
+  .media {
+    width:100%!important;
+    position:static!important;
+    left: initial!important;
+    top: initial!important;
+    border: 0!important;
+    padding: 0!important;
+    background-color: white;
+    overflow: hidden;
+  }
+  .description {
+    width:100%!important;
+    position:static!important;
+    right: 5%;
+    top: 10%;
+    height: 80%;
+    border: 0 6.7% 0 0;
+    border-color: white;
+    padding-top: 5%;
+    background-color: white;
+    overflow: hidden;
+  }
+  .footer {
+    position: static!important;
+    padding: 5%;
+  }
+  [class*="media-"] {
+    height: 100%;
+    width: 100%!important;
+    padding: 10% !important;
+    display: none;
+  }
+  [class*="description-"] {
+    height: 100%;
+    width: 100%!important;
+    padding: 10% !important;
+    display: none;
+  }
+}
+
+
+
+.landing {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/*Landing video wrapper*/
+.wrapper {
+	position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+	margin:0;
+	padding:10% 10%;
+}
+
+.enter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+	margin:0;
+}
+
+.enter-button {
+  position: absolute;
+  left: 47%;
+  right: 47%;
+  top: 46%;
+  bottom: 46%;
+  cursor: pointer;
+  width: 100px;
+  height: 38px;
+  background-color: rgba(225, 225, 225, 0.8);
+  border-radius: 10px;
+  text-align: center;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.grid-container {
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 20% 52% 33%;
+  grid-template-rows: 20% 70% 10%;
+  display: grid;
+  grid-template-areas:
+    "hd hd hd"
+    "nav media description"
+    "ft ft ft";
+}
+
+.grid-container .header {
+  position: absolute;
+  grid-area: 'hd hd hd';
+  padding: 1.8% 5.5%;
+  z-index: 1;
+}
+
+.home {
+  cursor: pointer;
+}
+
+.grid-container .nav {
+  grid-area: 'nav';
+  position: absolute;
+  left: 5%;
+  top: 13%;
+  height: 79%;
+  width: 29%;
+  padding: 0 1%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.grid-container .media {
+  grid-area: 'media';
+  position: absolute;
+  left: 24%;
+  top: 12%;
+  height: 82%;
+  width: 53%;
+  border: 0 6.7%;
+  border-color: white;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.grid-container .description {
+  grid-area: 'description';
+  position: absolute;
+  width: 22%;
+  right: 5%;
+  top: 10%;
+  height: 80%;
+  border: 0 6.7% 0 0;
+  border-color: white;
+  padding-top: 5%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.grid-container .content {
+  height: 100%;
+  padding-right: 40%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 5%;
+  overflow: hidden;
+}
+
+.fit-height {
+  width: 50%;
+}
+
+.money-mind {
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+
+p {
+  font-family: 'Didact Gothic', 'Helvetica', sans-serif;
+}
+
+h1 {
+  font-family: 'Niramit', 'Helvetica', sans-serif;
+  font-weight: 400;
+  color: #282828;
+}
+
+h3 {
+  font-size: 17px;
+  line-height: 2;
+  font-family: 'Didact Gothic', 'Helvetica', sans-serif;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Didact Gothic', 'Helvetica', sans-serif;
+  font-weight: normal;
+  color: #3d3d3d;
+  cursor: pointer;
+}
+
+.link-cursor {
+  cursor: pointer;
+  display: inline;
+}
+
+a {
+  color: black;
+  font-family: 'Niramit', 'Helvetica', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1.0;
+  cursor: pointer;
+}
+
+.icon {
+  width: 15px;
+  display: inline-block;
+}
+
+/* CSS classes for jquery*/
+
+.grid-container .nav .content .piece1 {
+}
+.grid-container .nav .content .piece2 {
+}
+.grid-container .nav .content .piece3 {
+}
+.grid-container .nav .content .piece4 {
+}
+.grid-container .nav .content .piece5 {
+}
+.grid-container .nav .content .NewYork {
+}
+.grid-container .nav .content .piece6 {
+}
+.grid-container .nav .content .piece7 {
+}
+.grid-container .nav .content .piece8 {
+}
+.grid-container .nav .content .piece9 {
+}
+.grid-container .nav .content .piece10 {
+}
+.grid-container .nav .content .piece11 {
+}
+.grid-container .nav .content .piece12 {
+}
+.grid-container .nav .content .webdev {
+}
+.grid-container .nav .content .piece13 {
+}
+
+
+
+.grid-container .media .media-1 {
+  height: 100%;
+  width: 108%;
+  padding: 0 8% 0 0;
+  display: none;
+}
+.grid-container .media .media-2 {
+  height: 100%;
+  width: 108%;
+  padding: 0 8% 0 0;
+  display: none;
+}
+.grid-container .media .media-3 {
+  height: 100%;
+  width: 108%;
+  padding: 0 8% 0 0;
+  display: none;
+}
+.grid-container .media .media-4 {
+  height: 100%;
+  width: 108%;
+  padding: 0 8% 0 0;
+  display: none;
+}
+.grid-container .media .media-5 {
+  height: 100%;
+  width: 108%;
+  padding: 0 8% 0 0;
+  display: none;
+}
+.grid-container .media .media-NY {
+  height: 100%;
+  width: 108%;
+  padding: 0 8% 0 0;
+  display: none;
+}
+.grid-container .media .media-6 {
+  height: 100%;
+  width: 108%;
+  padding: 0 8% 0 0;
+  display: none;
+}
+.grid-container .media .media-7 {
+  height: 100%;
+  width: 108%;
+  padding-right: 24%;
+  padding-left: 23;
+  display: none;
+}
+.grid-container .media .media-8 {
+  height: 100%;
+  width: 108%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .media .media-9 {
+  position: fixed;
+  top: 12%;
+  left: 29%;
+  height: 82%;
+  width: 52%;
+  padding-left: 2%;
+  background-color: white;
+  display: none;
+}
+.grid-container .media .media-10 {
+  height: 100%;
+  width: 100%;
+  margin: 0 8% 0 0;
+  padding-right: 16%;
+  display: none;
+}
+.grid-container .media .media-11 {
+  height: 100%;
+  width: 120%;
+  padding-left: 3%;
+  padding-right: 3%;
+  display: none;
+}
+.grid-container .media .media-12 {
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  background-color: white;
+  display: none;
+}
+.grid-container .media .media-webdev {
+  height: 100%;
+  width: 126.5%;
+  padding: 22% 30% 21% 26%;
+  display: none;
+}
+.grid-container .media .media-13 {
+  height: 100%;
+  width: 126.5%;
+  padding: 10% 30% 21% 25%;
+  display: none;
+}
+
+
+.grid-container .description .description-1 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-2 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-3 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-4 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-5 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-NY {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-6 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-7 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-8 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-9 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-10 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-11 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-12 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-webdev {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+.grid-container .description .description-13 {
+  height: 100%;
+  width: 120%;
+  padding-right: 24%;
+  display: none;
+}
+
+.disabled {
+  display: none;
+}
+
+.grid-container .media .piece9-media .travel-container {
+  height: 92%;
+  width: 107%;
+  margin: 0 3% 0 0;
+  padding-right: 9%;
+  background-color: white;
+}
+
+
+/*YouTube Video Containers*/
+
+.youtube-container {
+  width: 85%;
+  padding-top: 64.55%;
+  position: relative;
+}
+
+.youtube-container-cine4k {
+  width: 85%;
+  padding-top: 65%;
+  position: relative;
+}
+
+.youtube-video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/*360 Image Viewer */
+
+.VRcontainer1 {
+  width: 100%;
+  display: none;
+}
+
+.VRcontainer2 {
+  width: 100%;
+  display: none;
+}
+
+.VRcontainer3 {
+  width: 100%;
+  display: none;
+}

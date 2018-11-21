@@ -1,0 +1,371 @@
+* {
+margin: 0;
+padding: 0;
+border: 0;
+box-sizing: border-box;
+width: 100%;
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+
+:-moz-any(#content,#appcontent) browser{
+ margin-right:-17px!important;
+ overflow-y:scroll;
+ margin-bottom:-17px!important;
+ overflow-x:scroll;
+}
+
+.grid-container {
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 20% 52% 33%;
+  grid-template-rows: 20% 80%;
+  display: grid;
+  grid-template-areas:
+    "hd hd hd"
+    "nav media description";
+}
+
+.grid-container .header {
+  position: absolute;
+  grid-area: 'hd hd hd';
+  padding: 1.8% 5.5%;
+}
+
+.grid-container .nav {
+  grid-area: 'nav';
+  position: absolute;
+  left: 5%;
+  top: 12%;
+  height: 82%;
+  width: 29%;
+  padding: 1% 1%;
+  background-color: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.grid-container .media {
+  grid-area: 'media';
+  position: absolute;
+  left: 28%;
+  top: 12%;
+  height: 82%;
+  width: 53%;
+  padding: 4% 7% 3% 0;
+  border: 0 6.7%;
+  border-color: white;
+  background-color: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.grid-container .description {
+  grid-area: 'description';
+  position: absolute;
+  width: 60%;
+  left: 74%;
+  top: 10%;
+  height: 85%;
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 38%;
+  background-color: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.grid-container .content {
+  height: 100%;
+}
+
+.fit-height {
+  width: 50%;
+}
+
+.money-mind {
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+
+p {
+  font-family: 'Didact Gothic', 'Helvetica', sans-serif;
+}
+
+h1 {
+  font-family: 'Niramit', 'Helvetica', sans-serif;
+  font-weight: 400;
+  color: #282828;
+}
+
+h3 {
+  font-size: 17px;
+  line-height: 2;
+  font-family: 'Didact Gothic', 'Helvetica', sans-serif;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Didact Gothic', 'Helvetica', sans-serif;
+  font-weight: normal;
+  color: #3d3d3d;
+  cursor: pointer;
+}
+
+.link-cursor {
+  cursor: pointer;
+  display: inline;
+}
+
+a {
+  color: black;
+  font-family: 'Niramit', 'Helvetica', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1.0;
+  cursor: pointer;
+}
+
+/* CSS classes for jquery*/
+
+.grid-container .nav .content .piece1 {
+}
+.grid-container .nav .content .piece2 {
+}
+.grid-container .nav .content .piece3 {
+}
+.grid-container .nav .content .piece4 {
+}
+.grid-container .nav .content .piece5 {
+}
+.grid-container .nav .content .NewYork {
+}
+.grid-container .nav .content .piece6 {
+}
+.grid-container .nav .content .piece7 {
+}
+.grid-container .nav .content .piece8 {
+}
+.grid-container .nav .content .piece9 {
+}
+.grid-container .nav .content .piece10 {
+}
+.grid-container .nav .content .piece11 {
+}
+.grid-container .nav .content .piece12 {
+}
+.grid-container .nav .content .webdev {
+}
+.grid-container .nav .content .piece13 {
+}
+
+
+
+.grid-container .media .piece1-media {
+  height: 100%;
+  width: 98%;
+  margin: 0 12% 0 0;
+  display: none;
+  overflow: hidden;
+}
+.grid-container .media .piece2-media {
+  height: 100%;
+  width: 98%;
+  margin: 0 12% 0 0;
+  display: none;
+  overflow: hidden;
+}
+.grid-container .media .piece3-media {
+  height: 100%;
+  width: 98%;
+  margin: 0 12% 0 0;
+  display: none;
+}
+.grid-container .media .piece4-media {
+  height: 100%;
+  width: 98%;
+  margin: 0 12% 0 0;
+  display: none;
+}
+.grid-container .media .piece5-media {
+  height: 100%;
+  width: 98%;
+  border: 0 12% 0 0;
+  display: none;
+}
+.grid-container .media .NewYork-media {
+  height: 100%;
+  width: 98%;
+  margin: 0 12% 0 0;
+  display: none;
+}
+.grid-container .media .piece6-media {
+  height: 100%;
+  width: 98%;
+  margin: 0 12% 0 0;
+  display: none;
+  overflow: hidden;
+}
+.grid-container .media .piece7-media {
+  height: 100%;
+  width: 98%;
+  margin: 0 12% 0 0;
+  display: none;
+}
+.grid-container .media .piece8-media {
+  height: 100%;
+  width: 108%;
+  margin: 0 20% 0 0;
+  display: none;
+}
+.grid-container .media .piece9-media {
+  position: fixed;
+  top: 12%;
+  left: 29%;
+  height: 82%;
+  width: 52%;
+  background-color: white;
+  display: none;
+}
+.grid-container .media .piece10-media {
+  height: 100%;
+  width: 100%;
+  margin: 0 12% 0 0;
+  display: none;
+  overflow: hidden;
+}
+.grid-container .media .piece11-media {
+  position: fixed;
+  top: 12%;
+  left: 29%;
+  height: 82%;
+  width: 52%;
+  background-color: white;
+  display: none;
+}
+.grid-container .media .piece12-media {
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  background-color: white;
+  display: none;
+}
+.grid-container .media .webdev-media {
+  height: 100%;
+  width: 98%;
+  margin: 0 12% 0 0;
+  display: none;
+}
+.grid-container .media .piece13-media {
+  height: 100%;
+  width: 98%;
+  margin: 0 12% 0 0;
+  display: none;
+}
+
+
+.grid-container .description .piece1-description {
+  height: 100%;
+  align-content: center;
+  display: none;
+}
+.grid-container .description .piece2-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .piece3-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .piece4-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .piece5-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .NewYork-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .piece6-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .piece7-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .piece8-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .piece9-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .piece10-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .piece11-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .piece12-description {
+  height: 100%;
+  display: none;
+}
+.grid-container .description .webdev-description {
+  position: fixed;
+  top: 42%;
+  left: 41%;
+  height: 82%;
+  width: 52%;
+  background-color: white;
+  display: none;
+}
+.grid-container .description .piece13-description {
+  height: 100%;
+  display: none;
+}
+
+.disabled {
+  display: none;
+}
+
+.grid-container .media .piece9-media .travel-container {
+  height: 100%;
+  width: 103%;
+  margin: 0 3% 0 0;
+  background-color: white;
+}
+
+/*360 Image Viewer */
+
+.VRcontainer1 {
+  height: 100%;
+  width: 106%;
+  margin: 0 8% 0 0;
+  display: none;
+}
+
+.VRcontainer2 {
+  height: 100%;
+  display: none;
+}
+
+.VRcontainer3 {
+  height: 100%;
+  display: none;
+}
