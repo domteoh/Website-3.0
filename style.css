@@ -131,6 +131,13 @@ overflow-x: hidden;
     background-color: transparent!important;
     display: none;
   }
+  .grid-container .media .media-12 {
+    position: fixed;
+    bottom: 0;
+    height: 100%;
+    background-color: white;
+    display: initial;
+  }
   [class*="description-"] {
     height: 100%;
     width: 100%!important;
@@ -501,7 +508,7 @@ a {
   bottom: 0;
   height: 100%;
   background-color: white;
-  display: none;
+  display: ;
 }
 .grid-container .media .media-webdev {
   height: 100%;
