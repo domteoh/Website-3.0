@@ -21,7 +21,7 @@ overflow-x: hidden;
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 812px) {
   .landing {
     position: absolute;
     top: 0;
@@ -127,14 +127,14 @@ overflow-x: hidden;
     position: static!important;
     height: 100%;
     width: 100%!important;
-    padding: 10% !important;
+    padding: 4% 9% 0 9% !important;
     background-color: transparent!important;
     display: none;
   }
   [class*="description-"] {
     height: 100%;
     width: 100%!important;
-    padding: 10% !important;
+    padding: 0 10% 1% 10% !important;
     display: none;
   }
   .grid-container .media .media-9 .travel-container {
@@ -150,7 +150,21 @@ overflow-x: hidden;
     bottom: 0;
     padding-right: 8%!important;
     overflow: hidden;
+  }
+  .youtube-container {
+    width: 100%!important;
+    padding-top: 75.8%!important;
+    position: relative;
+  }
 
+  .youtube-container-cine4k {
+    width: 100%!important;
+    padding-top: 76.3%!important;
+    position: relative;
+  }
+  .iframe {
+    width: 100%!important;
+    height: 100%!important;
   }
 }
 
